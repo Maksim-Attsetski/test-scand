@@ -11,6 +11,7 @@ import avatar2 from './test-data/avatars/avatar-2.png';
 import avatar3 from './test-data/avatars/avatar-3.png';
 
 import logo from './logo.png';
+import Star from './svg/Star';
 
 export const fakeImgs = {
   bg1,
@@ -26,3 +27,4 @@ export const fakeImgs = {
 };
 
 export const imgs = { logo };
+export const svg = { Star };
