@@ -4,6 +4,7 @@ import { INews } from 'widgets/News';
 import s from './NewsItem.module.scss';
 import { Flex, Gap } from 'UI';
 import NewsAuthor from '../NewsAuthor';
+import { dateHelper } from 'shared';
 
 interface IProps {
   news: INews;
@@ -16,7 +17,9 @@ const NewsItem: FC<IProps> = ({ news }) => {
       <Gap y={10} />
       <Flex>
         <div className={s.category}>{news.category[0]}</div>
-        <div className={s.date}>{news.createdAt}</div>
+        <div className={s.date}>
+          {dateHelper.getBeautifulDate(news.createdAt)}
+        </div>
       </Flex>
       <Gap y={15} />
       <div className={s.text}>{news.text}</div>

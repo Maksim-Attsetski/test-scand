@@ -7,6 +7,8 @@ export * from './hooks/useRedux';
 export * from './data/news';
 export * from './data/users';
 
+export * from './helpers/dateHelper';
+
 export * from './types';
 
 export { Logo, Heading, useActions };

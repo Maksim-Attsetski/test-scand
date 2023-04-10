@@ -8,7 +8,7 @@ export const allFakeNews: INews[] = [
     authorId: users[0],
     text: 'See my other project on my GitHub!',
     category: ['Content'],
-    createdAt: Date.now(),
+    createdAt: new Date('November 11, 2021').getTime(),
     preview: fakeImgs.bg1,
   },
   {
@@ -16,7 +16,7 @@ export const allFakeNews: INews[] = [
     authorId: users[1],
     text: 'ChatGPT takes over the world!',
     category: ['IT', 'Technologies'],
-    createdAt: Date.now(),
+    createdAt: new Date('April 21, 2022').getTime(),
     preview: fakeImgs.bg2,
   },
   {
@@ -24,7 +24,7 @@ export const allFakeNews: INews[] = [
     authorId: users[2],
     text: 'Beta prototype sales iPad gen-z marketing network effects value proposition',
     category: ['Sales', 'Technologies'],
-    createdAt: Date.now(),
+    createdAt: new Date('May 01, 2022').getTime(),
     preview: fakeImgs.bg3,
   },
   {
@@ -32,7 +32,7 @@ export const allFakeNews: INews[] = [
     authorId: users[0],
     text: 'Seed round direct mailing non-disclosure agreement graphical user interface rockstar.',
     category: ['Design'],
-    createdAt: Date.now(),
+    createdAt: new Date('November 16, 2022').getTime(),
     preview: fakeImgs.bg4,
   },
   {
@@ -40,7 +40,7 @@ export const allFakeNews: INews[] = [
     authorId: users[1],
     text: 'Beta prototype sales iPad gen-z marketing network effects value proposition',
     category: ['Sales', 'Technologies'],
-    createdAt: Date.now(),
+    createdAt: new Date('February 08, 2023').getTime(),
     preview: fakeImgs.bg5,
   },
   {
@@ -48,7 +48,7 @@ export const allFakeNews: INews[] = [
     authorId: users[2],
     text: 'Pitch termsheet backing validation focus release.',
     category: ['Content'],
-    createdAt: Date.now(),
+    createdAt: new Date('April 03, 2023').getTime(),
     preview: fakeImgs.bg6,
   },
   {
@@ -56,7 +56,7 @@ export const allFakeNews: INews[] = [
     authorId: users[0],
     text: 'Pitch termsheet backing validation focus release.',
     category: ['Content'],
-    createdAt: Date.now(),
+    createdAt: new Date('April 09, 2023').getTime(),
     preview: fakeImgs.bg7,
   },
 ];
