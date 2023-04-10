@@ -6,6 +6,8 @@ import React, {
 } from 'react';
 
 import s from './Button.module.scss';
+import { routes } from 'shared';
+import { useNavigate } from 'react-router-dom';
 
 interface Props
   extends DetailedHTMLProps<
@@ -13,15 +15,22 @@ interface Props
     HTMLButtonElement
   > {
   colotType?: 'main' | 'outline';
+  to?: routes;
 }
 
 const Button: FC<Props> = ({
   colotType = 'main',
   className = '',
+  to,
   ...props
 }) => {
+  const navigate = useNavigate();
   return (
-    <button {...props} className={[s.btn, className, s[colotType]].join(' ')}>
+    <button
+      onClick={(e) => (to ? navigate(to) : props.onClick)}
+      {...props}
+      className={[s.btn, className, s[colotType]].join(' ')}
+    >
       {props.children}
     </button>
   );

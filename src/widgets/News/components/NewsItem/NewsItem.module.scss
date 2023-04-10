@@ -1,0 +1,24 @@
+@import 'shared/all.scss';
+
+.news {
+  width: 300px;
+  cursor: pointer;
+  
+  .preview {
+    width: 300px;
+    border-radius: 24px;
+  }
+  .category {
+    text-transform: capitalize;
+    color: $darkText;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .date {
+    color: #777777;
+  }
+  .text {
+    line-height: 32px;
+    font-size: calc(2vmin + 10px);
+  }
+}

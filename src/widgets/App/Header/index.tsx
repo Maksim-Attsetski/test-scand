@@ -11,7 +11,6 @@ const headerRoutes = [
   { text: 'Services', to: routes.Services },
   { text: 'About', to: routes.About },
 ];
-// { text: '', to: routes.auth, isBtn: true },
 
 const Header: FC = () => {
   return (
@@ -25,7 +24,9 @@ const Header: FC = () => {
             </NavLink>
           ))}
           <Gap x={10} />
-          <Button colotType='outline'>Log In</Button>
+          <Button to={routes.Auth} colotType='outline'>
+            Log In
+          </Button>
         </Flex>
       </Flex>
     </header>
