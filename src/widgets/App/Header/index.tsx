@@ -4,7 +4,7 @@ import s from './Header.module.scss';
 import { imgs } from 'assets';
 import { routes } from 'shared';
 import { NavLink } from 'react-router-dom';
-import { Button } from 'UI';
+import { Button, Flex, Gap } from 'UI';
 
 const headerRoutes = [
   { text: 'Product', to: routes.Product },
@@ -15,17 +15,20 @@ const headerRoutes = [
 
 const Header: FC = () => {
   return (
-    <div>
-      <img className={s.logo} src={imgs.logo} alt='Logo' />
-      <div>
-        {headerRoutes.map(({ text, to }) => (
-          <NavLink to={to} key={to}>
-            {text}
-          </NavLink>
-        ))}
-        <Button colotType='outline'>Log In</Button>
-      </div>
-    </div>
+    <header className={[s.header, 'container'].join(' ')}>
+      <Flex justify='space-between'>
+        <img className={s.logo} src={imgs.logo} alt='Logo' />
+        <Flex gap='15px 15px'>
+          {headerRoutes.map(({ text, to }) => (
+            <NavLink className={s.link} to={to} key={to}>
+              {text}
+            </NavLink>
+          ))}
+          <Gap x={10} />
+          <Button colotType='outline'>Log In</Button>
+        </Flex>
+      </Flex>
+    </header>
   );
 };
 
