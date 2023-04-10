@@ -1,0 +1,14 @@
+@import 'shared/all.scss';
+
+.title {
+  font-size: calc(7vmin + 14px);
+}
+.subTitle {
+  font-size: calc(2vmin + 8px);
+}
+
+.subTitle,
+.title {
+  color: $darkText;
+  text-align: center;
+}
