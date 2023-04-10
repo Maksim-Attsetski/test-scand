@@ -1,14 +1,14 @@
+import { allFakeNews } from 'shared';
 import { INews } from './types';
 
 // #NOTE This class is needed to send requests to API.
 class NewsService {
   async getNews(): Promise<INews[]> {
     try {
-      const news: INews[] = [];
       // const res = await axios.get(**endpoint**);
-      console.log('Successfully get news', news);
+      console.log('Successfully get news', allFakeNews);
 
-      return news;
+      return allFakeNews;
     } catch (error: any) {
       console.error(error?.message || error);
       throw error; // as example
