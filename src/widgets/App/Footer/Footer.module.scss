@@ -1,0 +1,13 @@
+
+.info {
+  width: clamp(300px, 20vw, 25vw);
+  &Text {
+    line-height: 28px;
+  }
+}
+
+.title {
+  font-weight: bold;
+  font-size: calc(2vmin + 8px);
+  text-align: center;
+}

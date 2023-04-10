@@ -3,13 +3,16 @@ import { Outlet } from 'react-router-dom';
 
 import s from './Layout.module.scss';
 import Header from '../Header';
+import Footer from '../Footer';
+import { Gap } from 'UI';
 
 const Layout: FC = () => {
   return (
     <div>
       <Header />
       <Outlet />
-      footer
+      <Gap y={40} />
+      <Footer />
     </div>
   );
 };

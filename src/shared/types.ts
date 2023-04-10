@@ -4,4 +4,6 @@ export enum routes {
   Services = '/services',
   About = '/about',
   Auth = '/auth',
+  Blog = '/blog',
+  Careers = '/careers',
 }

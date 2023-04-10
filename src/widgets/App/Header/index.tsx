@@ -1,10 +1,10 @@
 import React, { FC, memo } from 'react';
+import { NavLink } from 'react-router-dom';
+
+import { Logo, routes } from 'shared';
+import { Button, Flex, Gap } from 'UI';
 
 import s from './Header.module.scss';
-import { imgs } from 'assets';
-import { routes } from 'shared';
-import { NavLink } from 'react-router-dom';
-import { Button, Flex, Gap } from 'UI';
 
 const headerRoutes = [
   { text: 'Product', to: routes.Product },
@@ -16,7 +16,7 @@ const Header: FC = () => {
   return (
     <header className={[s.header, 'container'].join(' ')}>
       <Flex justify='space-between'>
-        <img className={s.logo} src={imgs.logo} alt='Logo' />
+        <Logo />
         <Flex gap='15px 15px'>
           {headerRoutes.map(({ text, to }) => (
             <NavLink className={s.link} to={to} key={to}>
