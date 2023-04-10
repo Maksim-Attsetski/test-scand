@@ -26,7 +26,7 @@ const links = [
   {
     title: 'Resources',
     routes: [
-      { to: routes.Blog, text: 'Blog' },
+      { to: routes.News, text: 'Blog' },
       { to: routes.Product, text: 'Products' },
       { to: routes.Services, text: 'Services' },
     ],

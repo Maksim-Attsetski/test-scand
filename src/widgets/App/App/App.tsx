@@ -17,11 +17,14 @@ const App: FC = () => {
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route path={routes.Home} element={<pages.Home />} />
-          <Route path={routes.News + ':id'} element={<pages.NewsItem />} />
           <Route path={routes.Product} element={<pages.Product />} />
           <Route path={routes.Services} element={<pages.Services />} />
           <Route path={routes.About} element={<pages.About />} />
           <Route path={routes.Auth} element={<pages.Auth />} />
+          <Route path={routes.Careers} element={<pages.Careers />} />
+          <Route path={routes.News} element={<pages.Blog />} />
+          <Route path={routes.News + ':id'} element={<pages.NewsItem />} />
+          <Route path={routes.NotFound} element={<pages.NotFound />} />
         </Route>
       </Routes>
     </>

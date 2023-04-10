@@ -1,14 +1,21 @@
-import React, { FC, memo } from 'react';
+import React, { FC, memo, useMemo } from 'react';
 
-import { useNews } from 'widgets/News';
+import { INews, useNews } from 'widgets/News';
 import { Flex } from 'UI';
 import NewsItem from '../NewsItem';
 
-const NewsList: FC = () => {
+interface IProps {
+  newsList?: INews[];
+}
+
+const NewsList: FC<IProps> = ({ newsList }) => {
   const { news } = useNews();
+
+  const allNews = useMemo(() => newsList ?? news, [news, newsList]);
+
   return (
     <Flex gap='50px 30px' align='flex-start' justify='space-between'>
-      {news.map((el) => (
+      {allNews.map((el) => (
         <NewsItem key={el.id} news={el} />
       ))}
     </Flex>
