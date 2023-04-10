@@ -47,15 +47,15 @@ const Footer: FC = () => {
           <Gap y={50} />
           <div>All rights reserved.</div>
         </div>
-        <Flex gap='40px' className={s.links}>
+        <Flex gap='40px' align='flex-start' className={s.links}>
           {links.map(({ title, routes }) => (
             <div key={title}>
               <h4 className={s.title}>{title}</h4>
               <Gap y={20} />
-              <Flex col justify='center' gap='30px'>
+              <Flex col justify='flex-end' align='flex-start' gap='30px'>
                 {routes.map(({ text, to, message }) => (
-                  <Link to={to} key={to}>
-                    {text}
+                  <Link className={s.link} to={to} key={to}>
+                    <span>{text}</span>
                     {message && <span className={s.message}>{message}</span>}
                   </Link>
                 ))}
@@ -64,6 +64,7 @@ const Footer: FC = () => {
           ))}
         </Flex>
       </Flex>
+      <Gap y={30} />
     </footer>
   );
 };

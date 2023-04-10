@@ -8,9 +8,9 @@ const Home: FC = () => {
     <div className='container'>
       <Gap y={20} />
       <Heading title='Thoughts and words' subTitle='Blog' />
-      <Gap y={40} />
+      <Gap y={50} />
       <hr />
-      <Gap y={20} />
+      <Gap y={50} />
       <div className='mini-container'>
         <h1>Latest news</h1>
         <Gap y={20} />
