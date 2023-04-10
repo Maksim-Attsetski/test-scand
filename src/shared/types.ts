@@ -7,3 +7,7 @@ export enum routes {
   Blog = '/blog',
   Careers = '/careers',
 }
+
+export interface IQuery {
+  limit?: number;
+}

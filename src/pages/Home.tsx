@@ -1,9 +1,10 @@
 import { Button, Flex, Gap } from 'UI';
 import React, { FC, memo } from 'react';
 import { Heading } from 'shared';
-import { NewsList } from 'widgets/News';
+import { NewsList, useNews } from 'widgets/News';
 
 const Home: FC = () => {
+  const { onLoadMoreNews } = useNews(true);
   return (
     <div className='container'>
       <Gap y={20} />
@@ -17,7 +18,9 @@ const Home: FC = () => {
         <NewsList />
         <Gap y={40} />
         <Flex justify='center'>
-          <Button colotType='outline'>Load more</Button>
+          <Button colotType='outline' onClick={onLoadMoreNews}>
+            Load more
+          </Button>
         </Flex>
       </div>
     </div>

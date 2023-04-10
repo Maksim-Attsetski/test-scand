@@ -1,20 +1,23 @@
-import { useActions, useTypedSelector } from 'shared';
-import { newsService } from './service';
 import { useEffect } from 'react';
+
+import { useActions, usePagination, useTypedSelector } from 'shared';
+import { newsService } from './service';
 
 export const useNews = (getOnInit?: boolean) => {
   const { news } = useTypedSelector((state) => state.news);
   const { action } = useActions();
 
+  const { limit, onLoadMore } = usePagination(6);
+
   const onGetNews = async () => {
-    const response = await newsService.getNews();
+    const response = await newsService.getNews({ limit });
 
     action.setNewsAC(response);
   };
 
   useEffect(() => {
     getOnInit && onGetNews();
-  }, [getOnInit]);
+  }, [getOnInit, limit]);
 
-  return { news, onGetNews };
+  return { news, onGetNews, onLoadMoreNews: onLoadMore };
 };
