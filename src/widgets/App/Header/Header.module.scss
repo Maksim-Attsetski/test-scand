@@ -2,6 +2,45 @@
 
 .header {
   padding: 20px 0;
+  &.active {
+    .burgerBody {
+      left: 0;
+    }
+    .burgerButton {
+      left: 0;
+    }
+  }
+
+  .content {
+    @include for-tablet {
+      display: none;
+    }
+  }
+
+  .burger {
+    display: none;
+    @include for-tablet {
+      display: block;
+    }
+
+    &Body {
+      position: absolute;
+      top: 0;
+      left: -200%;
+      z-index: 300;
+      transition: all linear 0.35s;
+      width: 100vw;
+      height: 100vh;
+      background-color: #fff;
+      padding: 20px 30px;
+    }
+
+    &Button {
+      border: none;
+      background-color: transparent;
+    }
+  }
+
   .link {
     color: $darkText;
   }
