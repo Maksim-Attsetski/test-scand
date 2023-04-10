@@ -1,12 +1,29 @@
 @import 'shared/all.scss';
 
+.newsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include for-tablet {
+    flex-direction: column;
+  }
+}
+
 .preview {
   max-width: 40%;
   border-radius: 32px;
+  @include for-tablet {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
 }
 
 .info {
   max-width: 50%;
+  @include for-tablet {
+    max-width: 100%;
+    text-align: center;
+  }
 }
 
 .category {

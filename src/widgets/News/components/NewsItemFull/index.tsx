@@ -22,7 +22,7 @@ const NewsItemFull: FC<IProps> = ({ item }) => {
     <div className='container'>
       <Gap y={50} />
       {curNewsItem ? (
-        <Flex justify='space-between'>
+        <div className={s.newsWrapper}>
           <img
             className={s.preview}
             src={curNewsItem.preview}
@@ -39,7 +39,7 @@ const NewsItemFull: FC<IProps> = ({ item }) => {
             </Flex>
             <div className={s.text}>{curNewsItem.text}</div>
           </div>
-        </Flex>
+        </div>
       ) : (
         <Heading title='This news was not founded' />
       )}

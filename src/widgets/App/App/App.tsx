@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { FC, memo } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import { pages } from 'pages';
@@ -6,8 +6,12 @@ import { routes } from 'shared';
 
 import Layout from '../Layout';
 import './App.scss';
+import { useNews } from 'widgets/News';
 
-const App = () => {
+const App: FC = () => {
+  // eslint-disable-next-line no-empty-pattern
+  const {} = useNews(true);
+
   return (
     <>
       <Routes>
