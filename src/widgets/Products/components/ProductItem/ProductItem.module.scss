@@ -1,0 +1,49 @@
+@import 'shared/all.scss';
+
+.product {
+  box-shadow: 2px 2px 10px 0px #00000067;
+  padding: 12px 20px;
+  border-radius: 16px;
+  color: #838383;
+  font-size: 20px;
+  
+  &.active {
+    background-color: $green;
+    color: #fff;
+    .circle {
+      border: 1px solid #fff;
+      &.done {
+        span {
+          background-color: #fff; 
+        }
+      }
+    }
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .requirement {
+    font-size: 16px;
+  }
+  .circle {
+    $size: 20px;
+
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    border: 2px solid $green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &.done {
+      span {
+        height: calc($size * 0.7);
+        width: calc($size * 0.7);
+        background-color: $green;
+        border-radius: $size;
+      }
+    }
+  }
+}

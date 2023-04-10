@@ -7,8 +7,10 @@ export * from './hooks/usePagination';
 
 export * from './data/news';
 export * from './data/users';
+export * from './data/products';
 
 export * from './helpers/dateHelper';
+export * from './helpers/getCurrency';
 
 export * from './types';
 

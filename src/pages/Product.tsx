@@ -1,10 +1,17 @@
-import React, { FC, memo } from 'react';
+import { Flex } from 'UI';
+import React, { FC, memo, useState } from 'react';
+import { products } from 'shared';
 import { ProductItem } from 'widgets/Products';
 
 const Product: FC = () => {
+  const [productList, setProductList] = useState(products);
   return (
     <div className='container'>
-      <div>{/* <ProductItem /> */}</div>
+      <Flex gap='30px'>
+        {productList.map((el) => (
+          <ProductItem product={el} key={el.id} />
+        ))}
+      </Flex>
     </div>
   );
 };
