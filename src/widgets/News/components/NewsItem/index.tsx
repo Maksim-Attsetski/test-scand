@@ -4,15 +4,18 @@ import { INews } from 'widgets/News';
 import s from './NewsItem.module.scss';
 import { Flex, Gap } from 'UI';
 import NewsAuthor from '../NewsAuthor';
-import { dateHelper } from 'shared';
+import { dateHelper, routes } from 'shared';
+import { useNavigate } from 'react-router-dom';
 
 interface IProps {
   news: INews;
 }
 
 const NewsItem: FC<IProps> = ({ news }) => {
+  const navigate = useNavigate();
+
   return (
-    <div className={s.news}>
+    <div className={s.news} onClick={() => navigate(routes.News + news.id)}>
       <img className={s.preview} src={news.preview} alt={'Preview'} />
       <Gap y={10} />
       <Flex>
