@@ -1,0 +1,10 @@
+@import 'shared/all.scss';
+
+.input {
+  border-radius: 56px;
+  padding: 12px 20px;
+  transition: all linear 0.2s;
+  border: 2px solid $darkText;
+  color: #000;
+  font-size: 16px;
+}

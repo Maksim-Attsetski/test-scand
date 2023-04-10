@@ -2,9 +2,10 @@ import React, { memo } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import { pages } from 'pages';
-
-import Layout from './Layout';
 import { routes } from 'shared';
+
+import Layout from '../Layout';
+import './App.scss';
 
 const App = () => {
   return (

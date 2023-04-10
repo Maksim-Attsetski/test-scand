@@ -4,6 +4,7 @@ import s from './Header.module.scss';
 import { imgs } from 'assets';
 import { routes } from 'shared';
 import { NavLink } from 'react-router-dom';
+import { Button } from 'UI';
 
 const headerRoutes = [
   { text: 'Product', to: routes.Product },
@@ -15,14 +16,14 @@ const headerRoutes = [
 const Header: FC = () => {
   return (
     <div>
-      <img src={imgs.logo} alt='Logo' />
+      <img className={s.logo} src={imgs.logo} alt='Logo' />
       <div>
         {headerRoutes.map(({ text, to }) => (
           <NavLink to={to} key={to}>
             {text}
           </NavLink>
         ))}
-        <button>Log In</button>
+        <Button colotType='outline'>Log In</Button>
       </div>
     </div>
   );

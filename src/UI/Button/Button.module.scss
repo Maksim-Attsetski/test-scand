@@ -1,0 +1,29 @@
+@import 'shared/all.scss';
+
+.btn {
+  border-radius: 56px;
+  padding: 6px 40px;
+  transition: all linear 0.2s;
+  color: $darkText;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: bold;
+  
+  &.main {
+    border: none;
+    background-color: $green;
+  }
+
+  &.outline {
+    border: 2px solid $darkText;
+    color: $darkText;
+    background-color: #fff;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(0.9);
+  }
+}
