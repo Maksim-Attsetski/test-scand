@@ -17,6 +17,7 @@ export const useNews = (getOnInit?: boolean) => {
 
   useEffect(() => {
     getOnInit && onGetNews();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [getOnInit, limit]);
 
   return { news, onGetNews, onLoadMoreNews: onLoadMore };
